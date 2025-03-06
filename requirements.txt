@@ -7,3 +7,4 @@ streamlit_pdf_viewer
 python-dotenv
 google-generativeai
 openpyxl
+fuzzywuzzy
