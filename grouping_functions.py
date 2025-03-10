@@ -117,8 +117,28 @@ def check_empty_groupings(df):
     return empty_groupings
 
 def get_suggestions(user_input, json_data):
-    suggestions = process.extract(user_input, json_data.keys(), limit=5)
-    return suggestions
+
+    key_matches = process.extract(user_input, json_data.keys(), limit=5)
+    # Step 2: Create a dictionary to store the number of good matches for each key
+    key_good_matches = {}
+    
+    # Step 3: Calculate the number of good matches for each key
+    for key, _ in key_matches:
+        good_matches = 0
+        for value in json_data[key]:
+            match_score = process.extractOne(user_input, [value])[1]
+            if match_score > 0:  # Count any match (no threshold)
+                good_matches += 1
+        key_good_matches[key] = good_matches
+    
+    # Step 4: Sort the keys first by match percentage (descending), then by number of good matches (descending)
+    sorted_keys = sorted(key_matches, key=lambda x: (-x[1], -key_good_matches[x[0]]))
+    
+    limit = 5
+    # Step 5: Return the top `limit` suggestions
+    return sorted_keys[:limit]
+
+
 
 def load_json_files(file_paths):
     data = {}
