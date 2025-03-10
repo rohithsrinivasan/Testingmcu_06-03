@@ -600,6 +600,12 @@
         "RES#",
         "RSTN"
     ],
+
+    "Standby": [
+        "STANDBY",
+        "STBY#"
+    ],
+    
     "System": [
         "#RES",
         "EMLE",

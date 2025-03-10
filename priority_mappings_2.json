@@ -58,6 +58,7 @@
       "Interrupt": "DI_Interrupt",
       "On_Chip_Oscillator": "DO_On_Chip_Oscillator",
       "External_Wait": "EA_External_Wait",
+      "Standby": "EB_Standby",
       "Ethernet_Interface": "EB_Ethernet_Interface",
       "DREQ": "ED_DREQ",
       "CAN_Interface": "FA_CAN_Interface",
