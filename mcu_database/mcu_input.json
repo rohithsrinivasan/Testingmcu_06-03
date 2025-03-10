@@ -273,7 +273,6 @@
         "\\TEST1"
     ],
     "On_Chip_Oscillator": [
-        "CTRSTBYB",
         "DETCK",
         "DETDI",
         "DETRSTN#",
@@ -443,8 +442,6 @@
         "SEN",
         "SIN",
         "SIOMCLK",
-        "STANDBY",
-        "STBY#",
         "TAMPIN",
         "THDCD",
         "THDCTL",
@@ -478,7 +475,6 @@
         "\\BUSHiZ",
         "\\CKIO2ENB",
         "\\CKPREQ",
-        "\\HSTBY",
         "\\IRL0",
         "\\IRL1",
         "\\IRL2",
@@ -598,12 +594,27 @@
         "RESET",
         "RES",
         "RES#",
-        "RSTN"
+        "RSTN",
+        "\\MRESET",
+        "\\PRESET",
+        "\\RDY",
+        "\\RES",
+        "\\RES(Vpp)",
+        "\\RESET",
+        "\\RESETM",
+        "\\RESETP"
+
     ],
 
     "Standby": [
         "STANDBY",
+        "STBY#",
+        "CTRSTBYB",
+        "\\HSTBY",
+        "STANDBY",
         "STBY#"
+
+
     ],
     
     "System": [
@@ -622,16 +633,7 @@
         "UB#",
         "USB20_VUBUSIN",
         "VBATTRESET#",
-        "\\MRESET",
-        "\\PRESET",
-        "\\RDY",
-        "\\RES",
-        "\\RES(Vpp)",
-        "\\RESET",
-        "\\RESETM",
-        "\\RESETP",
         "\\SLEEP",
-        "\\STBY",
         "\\Scan_testen",
         "\\UBPM"
     ],
